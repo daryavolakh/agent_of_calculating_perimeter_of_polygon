@@ -1,0 +1,724 @@
+agent_of_calculating_perimeter_of_polygon 
+=> nrel_main_idtf: 
+	[агентная scp-программа вычисления периметра многоугольника](* <- lang_ru;;*);
+	[agent scp-program of calculating perimeter of polygon](* <- lang_ru;;*);
+	<- agent_scp_program;;
+
+scp_program -> agent_of_calculating_perimeter_of_polygon
+	(*
+	-> rrel_params: .agent_of_calculating_perimeter_of_polygon_params
+		(*
+		-> rrel_1: rrel_in: _event;;
+		-> rrel_2: rrel_in: _input_arc;;
+		*);;
+
+	-> rrel_operators: .agent_of_calculating_perimeter_of_polygon_operators
+		(*
+		-> rrel_init: .agent_of_calculating_perimeter_of_polygon_operator1A
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _temp;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _input_arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _quest;;
+
+			=> nrel_goto: .agent_of_calculating_perimeter_of_polygon_operator1B;;
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator1B
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: action_of_calculating_perimeter_of_polygon;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+			=> nrel_then: .agent_of_calculating_perimeter_of_polygon_operator1C;;
+			=> nrel_else: .agent_of_calculating_perimeter_of_polygon_operator_return;;
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator1C
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _param;;
+
+			=> nrel_then: .agent_of_calculating_perimeter_of_polygon_operator2A11;;
+			=> nrel_else: .agent_of_calculating_perimeter_of_polygon_operator_return;;
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator2A11
+			(*
+			<- printNl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: [BEGIN!];;   
+
+			=> nrel_goto: .agent_of_calculating_perimeter_of_polygon_operator2A1;;   
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator2A1
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: rrel_not_relation: _unknown_class;;    
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _param;;
+
+			=> nrel_then: .agent_of_calculating_perimeter_of_polygon_operator2A2;;
+			=> nrel_else: .agent_of_calculating_perimeter_of_polygon_operator6A;;    
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator2A2
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: concept_rhomb;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;    
+			-> rrel_3: rrel_fixed: rrel_scp_var: _param;;
+
+			=> nrel_then: .agent_of_calculating_perimeter_of_polygon_operator2B;;
+			=> nrel_else: .agent_of_calculating_perimeter_of_polygon_operator2A3;;    
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator2A3
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: concept_regular_polygon;;    
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _unknown_class;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_strict_inclusion;;
+
+			=> nrel_then: .agent_of_calculating_perimeter_of_polygon_operator2B;;
+			=> nrel_else: .agent_of_calculating_perimeter_of_polygon_operator3A;;    
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator2B
+			(*
+			<- contAssign;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: rrel_link: _link1;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [0];;
+
+			=> nrel_goto: .agent_of_calculating_perimeter_of_polygon_operator2C;;
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator2C
+			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _segment;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_side_of_polygon;;
+
+			-> rrel_set_3: rrel_assign: rrel_scp_var: rrel_set: _temp_set1;;
+
+			=> nrel_then: .agent_of_calculating_perimeter_of_polygon_operator2D;;
+			=> nrel_else: .agent_of_calculating_perimeter_of_polygon_operator6A;;     
+			*);;
+		
+		-> .agent_of_calculating_perimeter_of_polygon_operator2D
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _temp_set1;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _side;;
+
+			=> nrel_then: .agent_of_calculating_perimeter_of_polygon_operator2E_erase;;
+			=> nrel_else: .agent_of_calculating_perimeter_of_polygon_operator2G;;      
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator2E_erase
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _arc1;;
+
+			=> nrel_goto: .agent_of_calculating_perimeter_of_polygon_operator2F;;
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator2F
+			(*
+			<- contAdd;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _link1;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _link1;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: [1];;
+
+			=> nrel_goto: .agent_of_calculating_perimeter_of_polygon_operator2D;;
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator2G
+			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _segment;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_side_of_polygon;;
+
+			-> rrel_set_3: rrel_assign: rrel_scp_var: rrel_set: _temp_set1;;
+
+			=> nrel_then: .agent_of_calculating_perimeter_of_polygon_operator2H;;
+			=> nrel_else: .agent_of_calculating_perimeter_of_polygon_operator6A;;     
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator2H
+			(*
+			<- contAssign;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: rrel_link: _link2;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [0];;
+
+			=> nrel_goto: .agent_of_calculating_perimeter_of_polygon_operator2I;;
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator2I
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _temp_set1;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _side;;
+
+			=> nrel_then: .agent_of_calculating_perimeter_of_polygon_operator2I_erase;;
+			=> nrel_else: .agent_of_calculating_perimeter_of_polygon_operator6A;;    
+			*);;
+
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator2I_erase
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _arc1;;
+
+			=> nrel_goto: .agent_of_calculating_perimeter_of_polygon_operator2J;;
+			*);;
+		-> .agent_of_calculating_perimeter_of_polygon_operator2J
+			(*
+			<- contAdd;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _link2;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _link2;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: [1];;
+
+			=> nrel_goto: .agent_of_calculating_perimeter_of_polygon_operator2K1;;
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator2K1
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _side;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc2;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _node1;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc3;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_length;;    
+
+			=> nrel_then: .agent_of_calculating_perimeter_of_polygon_operator2K2;;
+			=> nrel_else: .agent_of_calculating_perimeter_of_polygon_operator2K7;;    
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator2K2
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _node2;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc2;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _node1;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc3;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_value;; 
+
+			=> nrel_then: .agent_of_calculating_perimeter_of_polygon_operator2K3;;
+			=> nrel_else: .agent_of_calculating_perimeter_of_polygon_operator2K7;;   
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator2K3
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _node2;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _node3;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc3;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_sm;;     
+
+			=> nrel_then: .agent_of_calculating_perimeter_of_polygon_operator2K4 ;;
+			=> nrel_else: .agent_of_calculating_perimeter_of_polygon_operator2K7;;  
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator2K4
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _node4;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc2;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _node3;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc3;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_identification;;
+
+			=> nrel_then: .agent_of_calculating_perimeter_of_polygon_operator2K5;;
+			=> nrel_else: .agent_of_calculating_perimeter_of_polygon_operator2K7;;   
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator2K5
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _node4;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _temp_link;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc3;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_decimal;;       
+
+			=> nrel_then: .agent_of_calculating_perimeter_of_polygon_operator2K6;;
+			=> nrel_else: .agent_of_calculating_perimeter_of_polygon_operator2K7;;  
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator2K6
+			(*
+			<- contMult;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: rrel_link: _link_perimeter;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _link1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _temp_link;;
+
+			=> nrel_goto: .agent_of_calculating_perimeter_of_polygon_operator5A1;;  
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator2K7
+			(*
+			<- ifEq;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _link2;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _link1;;
+
+			=> nrel_then: .agent_of_calculating_perimeter_of_polygon_operator6A;;
+			=> nrel_else: .agent_of_calculating_perimeter_of_polygon_operator2I;;
+			*);;
+
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator3A
+			(*
+			<- ifCoin;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: concept_polygon;;    
+			-> rrel_2: rrel_fixed: rrel_scp_var: _unknown_class;;
+
+			=> nrel_then: .agent_of_calculating_perimeter_of_polygon_operator4C;;
+			=> nrel_else: .agent_of_calculating_perimeter_of_polygon_operator3B;;   
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator3B
+			(*
+			<- genEl;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: rrel_node: _set_for_class;;
+
+			=> nrel_goto: .agent_of_calculating_perimeter_of_polygon_operator3C;;  
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator3C
+			(*
+			<- call;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: proc_find_class;;    
+			-> rrel_2: rrel_fixed: rrel_scp_const: .agent_of_calculating_perimeter_of_polygon_operator3C_params
+				(*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _unknown_class;;
+				-> rrel_2: rrel_fixed: rrel_scp_const: concept_polygon;;
+				-> rrel_3: rrel_fixed: rrel_scp_var: _set_for_class;;
+				*);;
+			-> rrel_3: rrel_assign: rrel_scp_var: _descr;;
+
+			=> nrel_goto: .agent_of_calculating_perimeter_of_polygon_operator3D;;  
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator3D
+			(*
+			<- waitReturn;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _descr;;
+
+			=> nrel_goto: .agent_of_calculating_perimeter_of_polygon_operator3E;;
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator3E
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _set_for_class;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _unknown_class;;
+	
+			=> nrel_then: .agent_of_calculating_perimeter_of_polygon_operator4C;;
+			=> nrel_else: .agent_of_calculating_perimeter_of_polygon_operator4A;;
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator4A
+			(*
+			<- ifCoin;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: concept_triangle;;    
+			-> rrel_2: rrel_fixed: rrel_scp_var: _unknown_class;;
+
+			=> nrel_then: .agent_of_calculating_perimeter_of_polygon_operator4C;;
+			=> nrel_else: .agent_of_calculating_perimeter_of_polygon_operator4B;;  
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator4B
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_const: concept_triangle;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _unknown_class;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_strict_inclusion;;
+
+			=> nrel_then: .agent_of_calculating_perimeter_of_polygon_operator4C;;
+			=> nrel_else: .agent_of_calculating_perimeter_of_polygon_operator6A;;
+			*);;
+
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator4C
+			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _segment;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_side_of_polygon;;
+
+			-> rrel_set_3: rrel_assign: rrel_scp_var: rrel_set: _temp_set1;;
+
+			=> nrel_then: .agent_of_calculating_perimeter_of_polygon_operator4E;;
+			=> nrel_else: .agent_of_calculating_perimeter_of_polygon_operator6A;;      
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator4E
+			(*
+			<- contAssign;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _link_perimeter;;
+			-> rrel_2: rrel_fixed: rrel_scp_const: [0];;
+
+			=> nrel_goto: .agent_of_calculating_perimeter_of_polygon_operator4F;;
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator4F
+			(*
+			<- searchElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _temp_set1;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _node;;
+
+			=> nrel_then: .agent_of_calculating_perimeter_of_polygon_operator4G;;
+			=> nrel_else: .agent_of_calculating_perimeter_of_polygon_operator5A1;;    //переход на генерацию
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator4G
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _arc1;;
+
+			=> nrel_goto: .agent_of_calculating_perimeter_of_polygon_operator4H1;;
+			*);;
+
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator4H1
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _node;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc2;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _node1;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc3;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_length;;  
+
+			=> nrel_then: .agent_of_calculating_perimeter_of_polygon_operator4H2;;
+			=> nrel_else: .agent_of_calculating_perimeter_of_polygon_operator6A;;
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator4H2
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _node2;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc2;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _node1;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc3;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_value;;    
+
+			=> nrel_then: .agent_of_calculating_perimeter_of_polygon_operator4H3;;
+			=> nrel_else: .agent_of_calculating_perimeter_of_polygon_operator6A;;
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator4H3
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _node2;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _node3;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc3;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_sm;;     
+
+			=> nrel_then: .agent_of_calculating_perimeter_of_polygon_operator4H4;;
+			=> nrel_else: .agent_of_calculating_perimeter_of_polygon_operator6A;;
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator4H4
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _node4;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc2;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _node3;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc3;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_identification;;
+
+			=> nrel_then: .agent_of_calculating_perimeter_of_polygon_operator4H5;;
+			=> nrel_else: .agent_of_calculating_perimeter_of_polygon_operator6A;;
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator4H5
+			(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _node4;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _temp_link;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc3;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_decimal;;     
+
+			=> nrel_then: .agent_of_calculating_perimeter_of_polygon_operator4H6;;
+			=> nrel_else: .agent_of_calculating_perimeter_of_polygon_operator6A;;
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator4H6
+			(*
+			<- contAdd;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _link_perimeter;;
+			-> rrel_2: rrel_fixed: rrel_scp_var: _link_perimeter;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _temp_link;;
+
+			=> nrel_goto: .agent_of_calculating_perimeter_of_polygon_operator4F;;
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator5A1
+			(*
+			<- genElStr5;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _node4;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _link_perimeter;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_decimal;; 
+
+			=> nrel_goto: .agent_of_calculating_perimeter_of_polygon_operator5A2;;
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator5A2
+			(*
+			<- genElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _node4;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc2;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _node3;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc3;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_identification;;
+
+			=> nrel_goto: .agent_of_calculating_perimeter_of_polygon_operator5A3;;
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator5A3
+			(*
+			<- genElStr5;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _node2;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _node3;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc3;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_sm;; 
+
+			=> nrel_goto: .agent_of_calculating_perimeter_of_polygon_operator5A4;;
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator5A4
+			(*
+			<- genElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _node2;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc2;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _node_answer;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc3;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_value;;   
+
+			=> nrel_goto: .agent_of_calculating_perimeter_of_polygon_operator5A5;;
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator5A5
+			(*
+			<- genElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc2;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _node_answer;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc3;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_perimeter;; 
+
+			=> nrel_goto: .agent_of_calculating_perimeter_of_polygon_operator5B;;
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator5B
+			(*
+			<- genEl;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: rrel_const: rrel_node: _answer;;
+
+			=> nrel_goto: .agent_of_calculating_perimeter_of_polygon_operator5C;;
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator5C
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _param;;
+
+			=> nrel_goto: .agent_of_calculating_perimeter_of_polygon_operator5D;;
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator5D
+			(*
+			<- searchSetStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_common: _arc2;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _node_perimeter;;
+			-> rrel_4: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc3;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_perimeter;; 
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: rrel_set: _answer;;
+			-> rrel_set_3: rrel_fixed: rrel_scp_var: rrel_set: _answer;;
+			-> rrel_set_4: rrel_fixed: rrel_scp_var: rrel_set: _answer;;
+
+			=> nrel_goto: .agent_of_calculating_perimeter_of_polygon_operator5E;;
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator5E
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: nrel_perimeter;; 
+
+			=> nrel_goto: .agent_of_calculating_perimeter_of_polygon_operator5F;;
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator5F
+			(*
+			<- genElStr5;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_common: rrel_scp_var: _arc1;;
+		  	-> rrel_3: rrel_fixed: rrel_scp_var: _answer;;
+		  	-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		  	-> rrel_5: rrel_fixed: rrel_scp_const: nrel_answer;;
+
+			=> nrel_goto: .agent_of_calculating_perimeter_of_polygon_operator7B;; 
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator6A
+			(*
+			<- genEl;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: rrel_node: rrel_const: _answer;;
+
+			=> nrel_goto: .agent_of_calculating_perimeter_of_polygon_operator6B;;
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator6B
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc2;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: [Can't calculate perimeter];;
+
+			=> nrel_goto: .agent_of_calculating_perimeter_of_polygon_operator6C;;
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator6C
+			(*
+			<- searchSetStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: [Can't calculate perimeter];;
+
+			-> rrel_set_2: rrel_fixed: rrel_scp_var: rrel_set: _answer;;
+
+			=> nrel_goto: .agent_of_calculating_perimeter_of_polygon_operator6D;;
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator6D
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _param;;
+
+			=> nrel_goto: .agent_of_calculating_perimeter_of_polygon_operator6E;;
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator6E
+			(*
+			<- genElStr3;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+			-> rrel_2: rrel_assign: rrel_scp_var: rrel_pos_const_perm: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: [Can't calculate perimeter];;
+
+			=> nrel_goto: .agent_of_calculating_perimeter_of_polygon_operator5F;;
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator7A
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _set_of_classes;;
+
+			=> nrel_goto: .agent_of_calculating_perimeter_of_polygon_operator7B;;
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator7B
+			(*
+			<- eraseEl;;
+
+			-> rrel_1: rrel_fixed: rrel_scp_var: rrel_erase: _temp_set1;;
+
+			=> nrel_goto: .agent_of_calculating_perimeter_of_polygon_operator_return;;
+			*);;
+
+		-> .agent_of_calculating_perimeter_of_polygon_operator_return
+			(*
+			<- return;;
+			*);;
+		*);;
+	*);;

@@ -1,0 +1,36 @@
+lib_component_agent_of_calculating_perimeter_of_polygon
+=> nrel_main_idtf:
+	[Компонент библиотеки. Sc-агент вычисления периметра многоугольника]
+	(* <- lang_ru;; *);
+	[Library component. Sc-agent of calculating perimeter of polygon]
+	(* <- lang_en;; *);
+
+<- platform_independent_reusable_component_OSTIS; 
+<- atomic_reusable_component_OSTIS; 
+<- reusable_scp_agent;
+
+-> rrel_key_sc_element: 
+	.platform_independent_realization_of_sc_agent_of_calculating_perimeter_of_polygon;
+
+<- rrel_key_sc_element: 
+	...
+	(*
+	<- explanation;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			"file://htmls/Agent_Of_Calculating_Perimeter_Of_Polygon.html"
+				(* <- lang_ru;; *);; 
+		*);;
+	*);;
+
+
+sc_node_not_relation -> action_of_calculating_perimeter_of_polygon;;
+
+action_of_calculating_perimeter_of_polygon => nrel_main_idtf:
+	[действие. вычислить периметр многоугольника]
+		(*<- lang_ru;;*);;
+action_of_calculating_perimeter_of_polygon => nrel_main_idtf:
+	[action. calculate perimeter of polygon]
+		(* <- lang_en;; *);;
