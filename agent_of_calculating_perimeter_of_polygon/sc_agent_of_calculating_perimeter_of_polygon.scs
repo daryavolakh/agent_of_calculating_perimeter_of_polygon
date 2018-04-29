@@ -27,6 +27,7 @@ sc_agent_of_calculating_perimeter_of_polygon
 	<= nrel_sc_agent_program: 
 		{
 		agent_of_calculating_perimeter_of_polygon;
+		proc_of_generating_comment;
 		proc_find_class
 		};;
 	-> sc_agent_of_calculating_perimeter_of_polygon_scp   
